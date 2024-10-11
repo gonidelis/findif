@@ -72,9 +72,9 @@ bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2) {
 
 int main() {
 
-  printf("mismatchAt(%), cub::FindIf, thrust::find_if, thrust::count_if\n");
-  for (float mismatch_at = 0; mismatch_at < 0.1; mismatch_at += 0.0031) {
-    std::printf("%.2f", mismatch_at * 100);
+  printf("mismatchAt, cub::FindIf, thrust::find_if, thrust::count_if\n");
+  for (float mismatch_at = 0; mismatch_at < 1; mismatch_at += 0.01) {
+    std::printf("%.3f", mismatch_at * 100);
 
     // data set up
     static constexpr std::size_t elements = 2 << 28;

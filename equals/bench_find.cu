@@ -49,8 +49,8 @@ template <class InputIt1> int find(InputIt1 first1, InputIt1 last1, int val) {
 int main() {
 
   printf("mismatchAt, cub::FindIf, thrust::find_if, thrust::count_if\n");
-  for (float mismatch_at = 0; mismatch_at < 0.1; mismatch_at += 0.005) {
-    std::printf("%.3f", mismatch_at);
+  for (float mismatch_at = 0; mismatch_at < 1; mismatch_at += 0.01) {
+    std::printf("%.3f", mismatch_at * 100);
 
     // data set up
     static constexpr std::size_t elements = 2 << 28;
@@ -89,7 +89,5 @@ int main() {
     end = std::chrono::high_resolution_clock::now();
     duration = std::chrono::duration<double>(end - start);
     std::printf(", %.4f \n", duration.count());
-
-    std::cout << x << *y << z << std::endl;
   }
 }
